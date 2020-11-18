@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <check-out :product="product" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CheckOut from './components/CheckOut.vue'
 
 export default {
   name: 'App',
+  data() {
+     return {
+          product: {
+          name: 'Shure Mic SM7B',
+          price: 200,
+      }
+    }
+  },
   components: {
-    HelloWorld
+    CheckOut
   }
 }
 </script>
